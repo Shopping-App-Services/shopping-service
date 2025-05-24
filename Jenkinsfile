@@ -5,7 +5,7 @@ pipeline {
     }
   environment {
         SONAR_TOKEN = credentials('sonar-token') // Jenkins credential ID
-        SONAR_HOST_URL = 'https://68308f6c8c1b3edc072bf40a-c4bff7.node-ap-a1de.iximiuz.com'
+        SONAR_HOST_URL = '${SONAR_HOST_URL}'
         SONAR_SCANER_HOME= tool 'SonarQube'
         GOCACHE = "${WORKSPACE}/.go-cache"
     }
